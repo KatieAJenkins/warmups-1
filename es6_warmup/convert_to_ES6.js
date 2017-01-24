@@ -108,7 +108,9 @@ function ObjProperties(name, grade, favColor) {
 
 function ObjPropertiesEs6(name, grade, favColor) {
   //Your code here
+  return {
   name,
   grade,
   favColor
+};
 }
