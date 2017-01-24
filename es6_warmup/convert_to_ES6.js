@@ -1,3 +1,4 @@
+'use strict';
 //Refactor each function according to the directions given. The tests will still pass if you use Es5 syntax, but the spirit of this exercise is to use Es6 syntax and then compare the two functions to one another. Your refactored code should go in the functions with "your code goes here".
 
 module.exports = {
@@ -22,11 +23,13 @@ function swap(arr,x,y){
   arr[x] = arr[y];
   arr[y] = temp;
 }
+var arr = [1,2];
 
 function swapEs6(arr,x,y){
-  //Your code here
+   [arr[x], arr[y]] = [arr[y], arr[x]];
 }
 
+swapEs6(arr);
 
 //refactor this to use es6 for...of syntax
 function changeEachElem(array){
@@ -39,6 +42,11 @@ function changeEachElem(array){
 
 function changeEachElemEs6(array){
   //Your code here
+  var result = [];
+  for (let item of array){
+    result.push(item)
+  }
+  return result;
 }
 
 
@@ -54,15 +62,21 @@ function useArrows(array){
 function useArrowsEs6(array){
   //Your code here
 
+  var result = array.map((element) => {
+    // let result = array.map (element => element * 2);
+    return element * 2;
+  });
+  return result;
 }
 
-//refactor this to use the backticks for string interpolation
+//refactor this to use the backticks for string interpolation//template literals
 function printString(name,greeting){
   return name + ' says "' + greeting +'"';
 }
 
 function printStringEs6(name,greeting){
   //Your code here
+    return `${name} says "${greeting}"`;
 
 }
 
@@ -77,7 +91,9 @@ function makeObj(val1,val2){
 
 function makeObjEs6(val1,val2){
   //Your code here
-
+  return {
+    [val1 + val2]: "Shayna"
+  };
 }
 
 
@@ -92,4 +108,7 @@ function ObjProperties(name, grade, favColor) {
 
 function ObjPropertiesEs6(name, grade, favColor) {
   //Your code here
+  name,
+  grade,
+  favColor
 }
