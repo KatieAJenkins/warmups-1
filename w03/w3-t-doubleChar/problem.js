@@ -12,7 +12,10 @@
 // doubleChar("1234!_ ") ==> "11223344!!__  "
 // Good Luck!
 
-// DONE?? Do it with a RegEx! (a 2 line solution is possible)
+// DONE??
+// - Refactor using a Higher Order Function
+// - Do it with a RegEx! (a 2 line solution is possible)
+
 
 let string = "love";
 
