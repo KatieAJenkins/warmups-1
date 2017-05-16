@@ -80,7 +80,6 @@ function printStringEs6(name,greeting){
 
 }
 
-
 //refactor this to  be more concise by using new es6 syntax for 'computed property names'
 function makeObj(val1,val2){
   var num = val1 + val2;
